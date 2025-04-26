@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel='stylesheet' type='text/css' href='css/main.css'>
+    </head>
+<body>
+	
+
+<div id="popUpContainer">
+    <h1 id="extensionName">SimplePass</h1>
+
+    <div id="length-container">
+        <label>Password Length: <input  id="length" min="6" max="24" type="number" value="12" /></label>
+    </div>
+
+    <ul id="checkboxes">
+        <li>
+            <input type="checkbox" id="uppercase" name="uppercase" value="uppercase" checked>
+            <label for="uppercase">Uppercase</label>
+        </li>
+        <li>
+            <input type="checkbox" id="special" name="special" value="special" checked>
+            <label for="special">Special Characters</label>
+        </li>
+        <li>
+            <input type="checkbox" id="numbers" name="numbers" value="numbers" checked>
+            <label for="numbers">Numbers</label>
+        </li>
+    </ul>
+
+    <div>
+        <button id="generate">Generate</button>
+        <button id="copy">Copy</button>
+        <button id="reset">Reset</button>
+        <div class="output" id="password">Your password</div>
+    </div>
+</div>
+
+<script src="js/generatePassword.js"></script>
+</body>
+</html>

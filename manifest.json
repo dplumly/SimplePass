@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "SimplePass",
+  "description": "Make passwords simple",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+    ],
+      "css": ["css/main.css"],
+      "js": ["js/content.js"] 
+    }
+  ],
+  "icons": {
+    "48": "Resetter-Logo.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["img/eyes.gif", "fonts/*.ttf", "fonts/*.woff2", "fonts/*.woff"],
+      "extension_ids": ["*"],
+      "matches": ["*://*/*"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+    },
+    "permissions": [
+      "tabs",
+      "activeTab",
+      "storage"
+  ]
+}

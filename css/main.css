@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+/*==============================================
+Fonts for popup.html
+==============================================*/
+@font-face {
+  font-family: 'Poppins-Black';
+  src:  url('chrome-extension://__MSG_@@extension_id__/fonts/Poppins-Black.tff') format('tff'),
+        url('chrome-extension://__MSG_@@extension_id__/fonts/Poppins-Black.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins-Bold';
+  src:  url('chrome-extension://__MSG_@@extension_id__/fonts/Poppins-Bold.tff') format('tff'),
+        url('chrome-extension://__MSG_@@extension_id__/fonts/Poppins-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins-Regular';
+  src:  url('chrome-extension://__MSG_@@extension_id__/fonts/Poppins-Regular.ttf') format('tff'),
+        url('chrome-extension://__MSG_@@extension_id__/fonts/Poppins-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins-Light';
+    src:  url('chrome-extension://__MSG_@@extension_id__/fonts/Poppins-Light.ttf') format('tff'),
+          url('chrome-extension://__MSG_@@extension_id__/fonts/Poppins-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+h1, h2, h3, h4, h5, h6, p {
+  /* font-family: Helvetica, Arial, Sans-Serif; */
+  font-family: 'Poppins-Black', Sans-Serif;
+}
+
+label, ul, li button {
+    color: #E9E9E9;
+    font-family: 'Poppins-Regular', Sans-Serif;
+}
+
+/*==============================================
+Popup html styles
+==============================================*/
+#popUpContainer {
+  height: 350px;
+  width: 350px;
+  margin: 0 auto;
+  padding: 15px 30px;
+  background-color: #3B3B3B;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#extensionName {
+  padding: 10px 0;
+  color: #00A8E8;
+  font-family: 'Poppins-Black', Sans-Serif;
+  font-size: 24px;
+  margin: 0 auto;
+  display: table;
+}
+
+#length-container {
+    margin: 20px 0;
+}
+
+#length {
+    width: 50px;
+    border-radius: 2px;
+    border: none;
+    padding: 2px 0 2px 5px;
+}
+
+#checkboxes {
+    margin: 0 0 20px 20px;
+}
+
+input[type='checkbox']:checked {
+    accent-color: #00A8E8;
+}
+
+/* input[type='checkbox']:checked {
+    background-color: #00A8E8;
+}
+input[type='checkbox']:checked:after {
+    content: '\2713';
+    color:white;
+  }
+  input[type='checkbox']{
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    width: 20px !important;
+    height: 20px !important;
+    appearance:none;
+    border-radius:10%;
+    border: 1px solid rgb(255 255 255 / 90%);
+    box-shadow: none;
+    font-size: 1em;
+  }   */
+
+/*==============================================
+Button styles
+==============================================*/
+button {
+    padding: 4px 20px;
+    border-radius: 20px;
+    border: none;
+    margin: 10px 0 20px 0;
+    color: #3B3B3B;
+    cursor: pointer;
+    transition: .5s ease-out;
+
+}
+
+#generate {
+    background-color: #00A8E8;
+}
+
+#reset {
+    background-color: #FF6B6B;
+    margin-left: 30px;
+}
+
+#generate:active, #copy:active, #reset:active {
+    background-color: #3B3B3B;
+}
+
+/*==============================================
+Modal styles
+==============================================*/
+#password {
+    color: #E9E9E9;
+    font-family: 'Poppins-Regular', Sans-Serif;
+    margin: 20px auto;
+    display: table;
+}
+
+.output {
+    font-size: 1.2em;
+    background: rgba(109, 109, 109, 0.4);
+    padding: 10px 15px;
+    border-radius: 5px;
+    word-wrap: break-word;
+}
+
+
