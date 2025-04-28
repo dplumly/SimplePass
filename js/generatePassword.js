@@ -26,7 +26,6 @@ function genPass(len, upper, nums, special) {
 
 // Generate the password
 document.getElementById('generate').addEventListener('click', () => {
-    // const len = parseInt(document.getElementById("length").value) || 12;
     const len = document.getElementById("length").valueAsNumber || 12;
     const upper = document.getElementById("uppercase").checked;
     const nums = document.getElementById("numbers").checked;
