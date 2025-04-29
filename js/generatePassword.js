@@ -33,6 +33,7 @@ document.getElementById('generate').addEventListener('click', () => {
 
     const pass = genPass(len, upper, nums, special);
     document.getElementById("password").textContent = pass;
+    console.log('generate');
 });
 
 
@@ -43,6 +44,7 @@ document.getElementById('reset').addEventListener('click', () => {
     document.getElementById("numbers").checked = true;
     document.getElementById("special").checked = true;
     document.getElementById("password").textContent = "Your password";
+    console.log('reset');
 });
 
 // Copy the password
@@ -56,5 +58,32 @@ document.getElementById('copy').addEventListener('click', () => {
             console.error('Failed to copy: ', err);
         });
 });
+
+
+// Lottie animation 
+document.getElementById('copy').addEventListener('click', () => {
+    const container = document.getElementById('lottie-container');
+    container.innerHTML = ''; 
+
+    const anim = lottie.loadAnimation({
+        container: container,
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: 'lottie/data.json'
+    });
+
+    anim.setSpeed(3); 
+
+    anim.addEventListener('complete', () => {
+        // Wait 1 second before clearing the animation
+        setTimeout(() => {
+            container.innerHTML = '';
+        }, 300); 
+    });
+});
+
+
+
 
 
