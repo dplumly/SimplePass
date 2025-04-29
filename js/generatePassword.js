@@ -72,15 +72,6 @@ document.getElementById('copy').addEventListener('click', () => {
         autoplay: true,
         path: 'lottie/data.json'
     });
-
-    anim.setSpeed(3); 
-
-    anim.addEventListener('complete', () => {
-        // Wait 1 second before clearing the animation
-        setTimeout(() => {
-            container.innerHTML = '';
-        }, 300); 
-    });
 });
 
 

@@ -10,7 +10,8 @@
       {
         "resources": ["fonts/*.ttf", "fonts/*.woff2", "fonts/*.woff"],
         "extension_ids": ["*"],
-        "matches": ["*://*/*"]
+        "matches": ["*://*/*"],
+        "resources": ["js/lottie.min.js"]
       }
     ],
     "action": {
