@@ -1,8 +1,6 @@
 console.log('generatePassword.js loaded');
 
-////////////////////////////////////////////////////////////////////////////
 // Logic to generate password
-////////////////////////////////////////////////////////////////////////////
 function genPass(len, upper, nums, special) {
     const lower = "abcdefghjkmnopqrstuvwxyz";
     const upperChars = "ABCDEFGHJKMNOPQRSTUVWXYZ";
@@ -59,7 +57,7 @@ document.getElementById('copy').addEventListener('click', () => {
         });
 });
 
-
+////////////////////////////////////////////////////////////////////////////
 // Lottie animation 
 document.getElementById('copy').addEventListener('click', () => {
     const container = document.getElementById('lottie-container');
@@ -74,7 +72,60 @@ document.getElementById('copy').addEventListener('click', () => {
     });
 });
 
+////////////////////////////////////////////////////////////////////////////
+// Saves the charater count of the password
+const lengthInput = document.getElementById('length');
 
+// Load saved length on popup open
+document.addEventListener('DOMContentLoaded', () => {
+    chrome.storage.local.get(['userInput'], (result) => {
+        if (result.userInput) {
+            lengthInput.value = result.userInput;
+            console.log('Loaded saved length:', result.userInput);
+        }
+    });
+});
 
+// Save new value on change
+lengthInput.addEventListener('input', () => {
+    const newLength = parseInt(lengthInput.value, 10);
+    if (!isNaN(newLength)) {
+        chrome.storage.local.set({ userInput: newLength }, () => {
+            console.log('Saved new length:', newLength);
+        });
+    }
+});
 
+////////////////////////////////////////////////////////////////////////////
+// Select all checkboxes
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+// Save on change
+checkboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+        // Save current states
+        chrome.storage.local.set({
+            uppercase: document.getElementById('uppercase').checked,
+            numbers: document.getElementById('numbers').checked,
+            special: document.getElementById('special').checked
+        }, () => {
+            console.log('Saved checkbox states');
+        });
+    });
+});
+
+// Load saved states on popup open
+document.addEventListener('DOMContentLoaded', () => {
+    chrome.storage.local.get(['uppercase', 'numbers', 'special'], (result) => {
+        if (typeof result.uppercase === 'boolean') {
+            document.getElementById('uppercase').checked = result.uppercase;
+        }
+        if (typeof result.numbers === 'boolean') {
+            document.getElementById('numbers').checked = result.numbers;
+        }
+        if (typeof result.special === 'boolean') {
+            document.getElementById('special').checked = result.special;
+        }
+    });
+});
 
