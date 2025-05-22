@@ -1,29 +1,26 @@
 {
-    "manifest_version": 3,
-    "name": "SimplePass",
-    "description": "Make passwords simple",
-    "version": "1.0",
-    "icons": {
-      "48": "SimplePass.png"
-    },
-    "web_accessible_resources": [
-      {
-        "resources": ["fonts/*.ttf", "fonts/*.woff2", "fonts/*.woff"],
-        "extension_ids": ["*"],
-        "matches": ["*://*/*"],
-        "resources": ["js/lottie.min.js"]
-      }
-    ],
-    "action": {
-      "default_popup": "popup.html"
-    },
-    "permissions": [
-      "tabs",
-      "activeTab",
-      "storage"
-    ]
-  }
-
-
-
-
+  "manifest_version": 3,
+  "name": "SimplePass",
+  "description": "No more confusing lookalike characters",
+  "version": "1.0",
+  "icons": {
+    "48": "SimplePass.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "fonts/*.ttf",
+        "fonts/*.woff2",
+        "fonts/*.woff",
+        "js/lottie.min.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "storage"
+  ]
+}

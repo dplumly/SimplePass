@@ -1,10 +1,11 @@
 console.log('generatePassword.js loaded');
 
+////////////////////////////////////////////////////////////////////////////
 // Logic to generate password
 function genPass(len, upper, nums, special) {
     const lower = "abcdefghjkmnopqrstuvwxyz";
-    const upperChars = "ABCDEFGHJKMNOPQRSTUVWXYZ";
-    const numChars = "023456789";
+    const upperChars = "ABCDEFGHJKMNPQRSTUVWXYZ";
+    const numChars = "23456789";
     const specialChars = "!@#$%&*()-_=+[]{};:,.<>?";
     let chars = lower;
 
@@ -21,7 +22,6 @@ function genPass(len, upper, nums, special) {
     return pass;
 }
     
-
 // Generate the password
 document.getElementById('generate').addEventListener('click', () => {
     const len = document.getElementById("length").valueAsNumber || 12;
@@ -33,7 +33,6 @@ document.getElementById('generate').addEventListener('click', () => {
     document.getElementById("password").textContent = pass;
     console.log('generate');
 });
-
 
 // Reset the password
 document.getElementById('reset').addEventListener('click', () => {
@@ -57,6 +56,7 @@ document.getElementById('copy').addEventListener('click', () => {
         });
 });
 
+
 ////////////////////////////////////////////////////////////////////////////
 // Lottie animation 
 document.getElementById('copy').addEventListener('click', () => {
@@ -71,6 +71,7 @@ document.getElementById('copy').addEventListener('click', () => {
         path: 'lottie/data.json'
     });
 });
+
 
 ////////////////////////////////////////////////////////////////////////////
 // Saves the charater count of the password
@@ -95,6 +96,7 @@ lengthInput.addEventListener('input', () => {
         });
     }
 });
+
 
 ////////////////////////////////////////////////////////////////////////////
 // Select all checkboxes

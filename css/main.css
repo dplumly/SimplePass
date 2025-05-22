@@ -177,6 +177,14 @@ button {
 /*==============================================
 Generated password
 ==============================================*/
+#password-container {
+    position: relative;
+    left: 20px;
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+}
+
 #password {
     color: #E9E9E9;
     font-family: 'Poppins-Regular', Sans-Serif;
@@ -191,11 +199,8 @@ Generated password
 
 
 #lottie-container {
-    position: absolute;
     width: 50px;
     height: 50px;
-    bottom: 50px;
-    right: 50px;
 }
 
 
