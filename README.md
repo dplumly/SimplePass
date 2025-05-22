@@ -4,9 +4,9 @@ Lowercase
 - i, l
 
 Uppercase
-- I, L
+- I, L, O
 
 Number
-- 1
+- 1, 0
 
 
